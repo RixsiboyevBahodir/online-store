@@ -23,11 +23,11 @@ export default function CardWrapper() {
     const [data, setData] = useState()
 
     const cardData = async (skip) => {
-        setLoading(true)
+        // setLoading(true)
         const cardFatch = await fetch(`https://dummyjson.com/products?limit=20&skip=${skip}`)
         const result = await cardFatch.json()
         setData(result)
-        setLoading(false)
+        // setLoading(false)
     }
 
     useEffect(() => {
@@ -84,7 +84,7 @@ export default function CardWrapper() {
                                         <p>order)</p>
                                     </div>
                                 </div>
-                                <Link to={`/products/${card.id}`} className="flex items-center w-full bg-[#743ffa] justify-center gap-2 rounded-xl p-2 font-semibold cursor-pointer text-white" onClick={() => product(card.id)}><TbBasketPlus /> add to cart</Link>
+                                <Link to={`/products/${card.id}`} className="flex items-center w-full bg-[#743ffa] justify-center gap-2 rounded-xl p-2 font-semibold cursor-pointer text-white"><TbBasketPlus /> add to cart</Link>
                             </div>
                         </div>
                     ))
