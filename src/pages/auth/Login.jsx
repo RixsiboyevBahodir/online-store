@@ -18,7 +18,7 @@ export default function Login() {
 
       if (user) {
         localStorage.setItem("LoginUser", JSON.stringify(user))
-        navigate("/home")
+        navigate("/")
       } else {
         setError("Login yoki password xato!")
       }

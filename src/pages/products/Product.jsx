@@ -14,16 +14,20 @@ export default function Product() {
     }
 
 
-    console.log(data)
-
 
     useEffect(() => {
         productFetch(id)
     }, [id])
 
     return (
-        <div>
-            <p>{data?.title}</p>
+        <div className="content">
+            <div className="">
+                <p className="text-4xl font-semibold">{data?.title}</p>
+                <div className="flex">
+                    <img src={data?.images[0]} alt="" className="max-w-[40%] shadow-2xl border-[#8683836b] rounded-2xl border" />
+                    <div></div>
+                </div>
+            </div>
         </div>
     )
 }

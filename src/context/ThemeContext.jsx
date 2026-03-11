@@ -5,6 +5,10 @@ export const Theme = createContext()
 export default function ContextProvider({ children }) {
     const [color, setColor] = useState("light")
 
+    const [wishList, setWshList] = useState([])
+
+
+
     function changeColor() {
         const html = document.querySelector("html")
         const newColor = color == "light" ? "dark" : "light"
@@ -18,7 +22,7 @@ export default function ContextProvider({ children }) {
     }
 
     return (
-        <Theme.Provider value={{ color, changeColor }}>
+        <Theme.Provider value={{ color, changeColor, setWshList, wishList }}>
             {children}
         </Theme.Provider>
     )
