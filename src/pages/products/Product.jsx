@@ -21,11 +21,11 @@ export default function Product() {
 
     return (
         <div className="content">
-            <div className="">
-                <p className="text-4xl font-semibold">{data?.title}</p>
-                <div className="flex">
-                    <img src={data?.images[0]} alt="" className="max-w-[40%] shadow-2xl border-[#8683836b] rounded-2xl border" />
-                    <div></div>
+            <div className="flex gap-10">
+                <img src={data?.images[0]} alt="" className="max-w-[45%] shadow-2xl border-[#8683836b] rounded-2xl border" />
+                <div className="border">
+                    <p className="text-[40px] font-semibold">{data?.title}</p>
+                    <p></p>
                 </div>
             </div>
         </div>

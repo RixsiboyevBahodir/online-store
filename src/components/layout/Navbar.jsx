@@ -58,7 +58,7 @@ export default function Navbar() {
     return (
         <div className='pt-3'>
             <div className='flex items-center justify-between'>
-                <Link to={'/home'} className='flex items-center gap-2 text-3xl font-semibold font-roboto'>
+                <Link to={'/'} className='flex items-center gap-2 text-3xl font-semibold font-roboto'>
                     <img src={marketLogo} alt="" className='max-w-10' />
                     <h1 className='text-[#743ffa] cursor-pointer'>uzum market</h1>
                 </Link>
